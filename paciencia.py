@@ -55,3 +55,16 @@ def empilha(baralho, origem, destino):
     
         
     return baralho
+
+def possui_movimentos_possiveis(lista):
+
+    soma = 0
+
+    for i in range(len(lista)):
+        x = lista_movimentos_possiveis(lista, i)    
+        if x != []:
+            soma += 1
+    if soma > 0:
+        return True
+    else:
+        return False
