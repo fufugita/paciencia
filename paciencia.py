@@ -46,3 +46,12 @@ def lista_movimentos_possiveis(b, i):
 
             
     return final
+
+def empilha(baralho, origem, destino):
+
+    carta = baralho[origem]
+    baralho.remove(baralho[origem])
+    baralho[destino] = carta
+    
+        
+    return baralho
