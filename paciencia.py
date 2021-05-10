@@ -8,3 +8,11 @@ def extrai_naipe(carta):
         if i == '♠' or i == '♥' or i == '♦' or i == '♣':
             return i
 
+def extrai_valor(valor):
+    for j in valor:
+        if j == 'A' or j =='Q' or j == 'J' or j == 'K':
+            return j
+        elif j == '2' or j == '3' or j == '4' or j == '5' or j =='6' or j == '7' or j == '8' or j == '9':
+            return j
+        elif j == '1':
+            return '10'
