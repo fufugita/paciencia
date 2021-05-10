@@ -16,3 +16,33 @@ def extrai_valor(valor):
             return j
         elif j == '1':
             return '10'
+
+def lista_movimentos_possiveis(b, i):
+    final = []
+
+    if i == 0:
+        return final
+
+    for j in b[i]:
+        print(j)
+
+        if j == '1' or j == '2':
+            j = '10'
+      
+            if  j == extrai_valor(b[i-1]) or j == extrai_naipe(b[i-1]):
+                final.append(1)
+
+            if i >= 3:
+                if j == extrai_naipe(b[i-3]) or j == extrai_valor(b[i-3]):
+                     final.append(3)
+
+        else:   
+            if  j == extrai_valor(b[i-1]) or j == extrai_naipe(b[i-1]):
+                final.append(1)
+
+            if i >= 3:
+                if j == extrai_naipe(b[i-3]) or j == extrai_valor(b[i-3]):
+                    final.append(3)
+
+            
+    return final
