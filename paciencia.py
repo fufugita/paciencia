@@ -72,10 +72,10 @@ def possui_movimentos_possiveis(lista):
 def cores(n):
     if extrai_naipe(n) == '♠':
         c= f'\033[1;34;40m{n}\033[0m'
-    if extrai_naipe(naipe) == '♥':
+    if extrai_naipe(n) == '♥':
         c= f'\033[1;31;40m{n}\033[0m'
-    if extrai_naipe(naipe) == '♣':
+    if extrai_naipe(n) == '♣':
         c= f'\033[1;32;40m{n}\033[0m'
-    if extrai_naipe(naipe) == '♦':
+    if extrai_naipe(n) == '♦':
         c= f'\033[1;35;40m{n}\033[0m'
     return c
