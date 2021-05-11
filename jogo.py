@@ -1,4 +1,5 @@
 from paciencia import *
+from random import shuffle
 
 print(  '''
     Paciência Acordeão 
@@ -14,3 +15,14 @@ print(  '''
     Aperte [Enter] para iniciar o jogo... 
         '''
 )
+ 
+input()
+
+baralho = cria_baralho()
+
+shuffle(baralho)
+
+if possui_movimentos_possiveis(baralho) == False:
+
+    print('Perdeu o Jogo, Não tem mais movimentos possíveis!')
+
